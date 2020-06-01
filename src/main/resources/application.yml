@@ -36,12 +36,8 @@ graphql:
     mapping: /graphql
     enabled: true
     corsEnabled: true
-    actuator-metrics: true
-    tracing-enabled: true
-  datetime:
-    scalars:
-      localDateTime:
-        scalarName: DateTime
+    actuator-metrics: false
+    tracing-enabled: false
 
 graphiql:
   mapping: /graphiql
@@ -81,5 +77,5 @@ voyager:
   enabled: true
   pageTitle: Voyager
 
-spring.security.user.name: admin
-spring.security.user.password: admin
+#spring.security.user.name: admin
+#spring.security.user.password: admin

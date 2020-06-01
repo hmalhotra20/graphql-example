@@ -70,3 +70,18 @@ query	{
   }
 }
 ```
+
+Initial Graphiql
+# ![Graphiql](./images/Graphiql1.png)
+
+Mutations
+# ![Playground Mutations](./images/Playground.png)
+
+Query Graphiql
+# ![Graphiql](./images/Graphiql2.png)
+
+Query Altair
+# ![Graphiql](./images/Altair.png)
+
+Voyager
+# ![Graphiql](./images/Voyager.png)
