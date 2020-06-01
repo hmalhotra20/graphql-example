@@ -17,7 +17,7 @@ Actuator security - spring.security.user.name: admin, spring.security.user.passw
 Help - https://github.com/graphql-java-kickstart/graphql-spring-boot
 
 ###Sample Mutation
-```json
+```graphql
 mutation {
   a: createUser(userName: "abcd", email: "abc@some.com") {
     id
@@ -44,7 +44,7 @@ mutation {
 ```
 
 ###Sample Query
-```json
+```graphql
 query	{
   users	{
     id
