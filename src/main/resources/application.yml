@@ -1,0 +1,85 @@
+server:
+  port: 9000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false
+
+spring:
+  application:
+    name: app
+  servlet:
+    multipart:
+      enabled: true
+      location: /tmp
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/gpocdb
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation=true:
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    actuator-metrics: true
+    tracing-enabled: true
+  datetime:
+    scalars:
+      localDateTime:
+        scalarName: DateTime
+
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+    subscriptions: /subscriptions
+  subscriptions:
+    timeout: 30
+    reconnect: false
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+  cdn:
+    enabled: false
+    version: 0.13.0
+
+altair:
+  mapping: /altair
+  endpoint:
+    graphql: /graphql
+  enabled: true
+  pageTitle: Altair
+  cdn:
+    enabled: false
+    version: 2.1.7
+
+graphql.playground:
+  mapping: /playground
+  endpoint: /graphql
+  subscriptionsEndpoint: /subscriptions
+  staticFolder.basePath: my-playground-resources-folder
+  enabled: true
+  pageTitle: Playground
+
+voyager:
+  enabled: true
+  pageTitle: Voyager
+
+spring.security.user.name: admin
+spring.security.user.password: admin
