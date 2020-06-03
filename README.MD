@@ -2,7 +2,7 @@
 This is a Spring Boot, JPA, Postgresql, Graphql project
 **User** creates **Post** objects and both can be retrieved as well. Sample urls and requests have been given below
 
-**This involves settings for **
+**This involves settings for**
  - Graphiql http://localhost:9000/graphiql
  - Playground http://localhost:9000/playground
  - Altair http://localhost:9000/altair
